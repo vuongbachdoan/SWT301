@@ -1,0 +1,1337 @@
+{
+	"info": {
+		"_postman_id": "30ea4a38-b6ff-4f2b-94f7-95abc3b300a8",
+		"name": "BachDoanVuong_NJS1708_SimpleBookAPI_JSONSERVER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "17814857",
+		"_collection_link": "https://winter-equinox-586908.postman.co/workspace/FPT~60685349-4c65-42f2-86c4-5b84d14a664c/collection/17814857-30ea4a38-b6ff-4f2b-94f7-95abc3b300a8?action=share&source=collection_link&creator=17814857"
+	},
+	"item": [
+		{
+			"name": "Register and Login",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Bach Doan Vuong\",\r\n    \"email\": \"vuongbachdoan@gmail.com\",\r\n    \"password\": \"vuong123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/register"
+					},
+					"response": [
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Bach Doan Vuong\",\r\n    \"email\": \"vuongbachdoan@gmail.com\",\r\n    \"password\": \"vuong123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"af-5gng0QClOTDJbhka1TZKZX4bVCI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:17:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 2,\n        \"username\": \"Bach Doan Vuong\",\n        \"email\": \"vuongbachdoan@gmail.com\",\n        \"password\": \"vuong123\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Register with exist email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"Bach Doan Vuong\",\r\n    \"email\": \"vuongbachdoan@gmail.com\",\r\n    \"password\": \"vuong123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/register"
+					},
+					"response": [
+						{
+							"name": "Register with exist email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"Bach Doan Vuong\",\r\n    \"email\": \"vuongbachdoan@gmail.com\",\r\n    \"password\": \"vuong123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/register"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "57"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"39-Tf8+GGxFaM2B7wgjYjAWkrv1WKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:18:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 401,\n    \"message\": \"Email already in use!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Set token\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.collectionVariables.set(\"auth_token\", jsonData.data.access_token);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/login"
+					},
+					"response": [
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"admin@gmail.com\",\r\n    \"password\": \"admin123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "275"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"113-VEFeSiNP3Eo6MEtu/TCot9iSGTU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:21:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"access_token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiYWRtaW4xMjMiLCJpYXQiOjE2OTc3MTgwNjcsImV4cCI6MTY5NzcyMTY2N30.0qEkcPZ7aqCiuCaJGTsb59xdVHGHbNgWd2eMnmc52t0\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Login with wrong email",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abcxyz@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/login"
+					},
+					"response": [
+						{
+							"name": "Login with wrong email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"abcxyz@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/login"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3f-QSn1acw6fvJi/R6Y2AW0LDQrdC4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:22:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 401,\n    \"message\": \"Incorrect email or password\"\n}"
+						}
+					]
+				},
+				{
+					"name": "List of users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/users"
+					},
+					"response": [
+						{
+							"name": "List of users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/auth/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "335"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14f-YtXgbpdBIzQ9wHZflNCMkWKqUyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:28:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"users\": [\n            {\n                \"id\": 1,\n                \"usersname\": \"admin\",\n                \"email\": \"admin@gmail.com\",\n                \"password\": \"admin123\"\n            },\n            {\n                \"id\": 2,\n                \"username\": \"Bach Doan Vuong\",\n                \"email\": \"vuongbachdoan@gmail.com\",\n                \"password\": \"vuong123\"\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Find user by email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "localhost:3000/auth/users/vuongbachdoan@gmail.com"
+					},
+					"response": [
+						{
+							"name": "Find user by email",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "localhost:3000/auth/users/vuongbachdoan@gmail.com"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-8JUZrs1uNCD9n4D/kTFoUFVRPOA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:29:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"result\": [\n        {\n            \"id\": 2,\n            \"username\": \"Bach Doan Vuong\",\n            \"email\": \"vuongbachdoan@gmail.com\",\n            \"password\": \"vuong123\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Get list of books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/books"
+					},
+					"response": [
+						{
+							"name": "Get list of books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/auth/books"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "796"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31c-OuVsNaXBVM8hZr7irb2CUtdk0IY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:31:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"books\": [\n            {\n                \"id\": 1,\n                \"name\": \"The Russian\",\n                \"type\": \"fiction\",\n                \"available\": true\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Just as I Am\",\n                \"type\": \"non-fiction\",\n                \"available\": false\n            },\n            {\n                \"id\": 3,\n                \"name\": \"The Vanishing Half\",\n                \"type\": \"fiction\",\n                \"available\": true\n            },\n            {\n                \"id\": 4,\n                \"name\": \"The Midnight Library\",\n                \"type\": \"fiction\",\n                \"available\": true\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Untamed\",\n                \"type\": \"non-fiction\",\n                \"available\": true\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Viscount Who Loved Me\",\n                \"type\": \"fiction\",\n                \"available\": true\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get single book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/books/1"
+					},
+					"response": [
+						{
+							"name": "Get single book",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/auth/books/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-MCjPyhHAaMtU+X5ivXrJw4+Xgxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:34:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"result\": [\n        {\n            \"id\": 1,\n            \"name\": \"The Russian\",\n            \"type\": \"fiction\",\n            \"available\": true\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "Order a book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 1,\r\n    \"customerName\": \"Evalyn_Schuppe51\",\r\n    \"quantity\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/auth/orders/create"
+					},
+					"response": [
+						{
+							"name": "Order a book",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\": 1,\r\n    \"customerName\": \"Evalyn_Schuppe51\",\r\n    \"quantity\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/auth/orders/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-W2Gn/888CHm0J5UvaVME7qJQD0Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 12:49:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 201,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 3,\n        \"bookId\": 1,\n        \"customerName\": \"Evalyn_Schuppe51\",\n        \"quantity\": 1000,\n        \"timestamp\": 1697719780118\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Order a book false",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 3,\r\n    \"customerName\": \"Evalyn_Schuppe51\",\r\n    \"quantity\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/auth/orders/create"
+					},
+					"response": [
+						{
+							"name": "Order a book false",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\": 3,\r\n    \"customerName\": \"Evalyn_Schuppe51\",\r\n    \"quantity\": 1000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/auth/orders/create"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-cnSY6HNnyzJY7LFWmpggE7yqp2o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:02:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 401,\n    \"message\": \"Book not exist or not available!!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get an order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/orders/1"
+					},
+					"response": [
+						{
+							"name": "Get an order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/auth/orders/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "180"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b4-my+gB+im3HxczNjUWEsFwm0O+jA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:04:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"result\": [\n        {\n            \"id\": 1,\n            \"bookId\": 1,\n            \"customerName\": \"Evalyn_Schuppe51\",\n            \"quantity\": 1,\n            \"timestamp\": 1645417257150\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": 1,\r\n    \"customerName\": \"Bach Doan Vuong UpdOr\",\r\n    \"quantity\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/auth/orders/update/1"
+					},
+					"response": [
+						{
+							"name": "Update order",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"bookId\": 1,\r\n    \"customerName\": \"Bach Doan Vuong UpdOr\",\r\n    \"quantity\": 10\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/auth/orders/update/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-WtdXwbRx2U/bX9l4utAzJZrBQcs\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:11:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": 1,\n        \"bookId\": 1,\n        \"customerName\": \"Bach Doan Vuong UpdOr\",\n        \"quantity\": 10,\n        \"timestamp\": 1645417257150\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/auth/orders/delete/1"
+					},
+					"response": [
+						{
+							"name": "Delete order",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3000/auth/orders/delete/1"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "90"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5a-xiHsvJ1Q3FORvnrzKtkYDARkrxY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:16:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": \"Order with id 1 has been deleted.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3000/auth/orders"
+					},
+					"response": [
+						{
+							"name": "Get all order",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3000/auth/orders"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "377"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"179-c2iRssfQ9yVo+1Co9JLe99IPO9w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:32:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"data\": {\n        \"orders\": [\n            {\n                \"id\": 2,\n                \"bookId\": 1,\n                \"customerName\": \"Evalyn_Schuppe51\",\n                \"quantity\": 1000,\n                \"timestamp\": 1697720383473\n            },\n            {\n                \"id\": 3,\n                \"bookId\": 3,\n                \"customerName\": \"Evalyn_Schuppe51\",\n                \"quantity\": 1000,\n                \"timestamp\": 1697720459131\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete user by email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{auth_token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3000/auth/users/delete/vuongbachdoan@gmail.com"
+					},
+					"response": [
+						{
+							"name": "Delete user by email",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3000/auth/users/delete/vuongbachdoan@gmail.com"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin, Accept-Encoding"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache"
+								},
+								{
+									"key": "Pragma",
+									"value": "no-cache"
+								},
+								{
+									"key": "Expires",
+									"value": "-1"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "114"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"72-kMPdr8RHEL4UzqA+SipOLYsukYc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 19 Oct 2023 13:33:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": \"User with email vuongbachdoan@gmail.com has been deleted.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "accessToken",
+			"value": ""
+		},
+		{
+			"key": "auth_token",
+			"value": ""
+		}
+	]
+}
